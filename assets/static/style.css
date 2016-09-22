@@ -1,42 +1,85 @@
+html {
+  font-size: 20px;
+}
+
 body {
-    font-family: 'Verdana', sans-serif;
-    margin: 50px 25px;
+  font-family: 'LatoWeb';
 }
 
-a {
-    color: #2a99b6;
+header {
+  height: 400px;
+  background: url('http://cdn4.dualshockers.com/wp-content/uploads/2015/10/02_ca_mid.png');
+  background-size: cover;
 }
 
-a:hover {
-    color: #33bbdf;
+p {
+  line-height: 1.5;
+  margin: 1.5rem 0;
 }
 
-header, footer, div.page {
-    width: 760px;
-    margin: 0 auto;
-    background: #daeef3;
-    padding: 20px 30px;
+h1, h2, h3 {
+  margin-top: 2rem;
+  font-weight: 900;
 }
 
-header h1 {
-    color: #169bbd;
-    margin: 0;
-    font-weight: normal;
-    font-size: 42px;
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+h2 {
+  font-size: 1.4rem;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 8px 0 0;
-    padding: 0;
+blockquote {
+  background-color: #e2f0ff;
+  margin-left: 3rem;
+  border-left: 5px solid #96b9e6;
 }
 
-div.page {
-    background: #f1fbfe;
+blockquote > p {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.main-container img {
+  max-width: 100%;
+}
+
+.main-container ul {
+  margin-top: -0.5rem;
+}
+
+.meta {
+  text-align: center;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 750px;
+}
+
+.navbar {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 900;
+  border-radius: 0;
+  color: white;
+  background-color: rgba(0,100,200,0.7);
+  padding: 3px 0 0 0;
+}
+
+.nav-item > a {
+  color: white;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item > a:hover {
+  border-bottom: 3px solid white;
+}
+
+.navbar.pull-xs-right {
+  font-size: 0.5rem;
 }

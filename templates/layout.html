@@ -1,29 +1,59 @@
 <!doctype html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — sfvn</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="{{ '/static/bootstrap/css/bootstrap-flex.min.css'|url }}">
+<link rel="stylesheet" href="{{ '/static/lato/latofonts.css'|asseturl }}">
+<link rel="stylesheet" href="{{ '/static/style.css'|asseturl }}">
+<title>{% block title %}Trang chủ{% endblock %} — SFVietnam</title>
 <body>
-  <header>
-    <h1>sfvn</h1>
-    <nav>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
       <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Welcome</a></li>
-        {% for href, title in [
-          ['/blog', 'Blog'],
-          ['/projects', 'Projects'],
-          ['/about', 'About']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
+        <li class="nav-item {% if this.is_child_of('/') %}active{% endif %}">
+          <a class="nav-link" href="{{ '/'|url }}"><strike>Salt Fountain</strike> Street Fighter Vietnam</a>
+        </li>
       </ul>
-    </nav>
-  </header>
-  <div class="page">
-    {% block body %}{% endblock %}
+      <ul class="nav navbar-nav pull-xs-right">
+        {% for href, title in [
+        ['/gioi-thieu', 'Giới thiệu'],
+        ['/bai-viet', 'Bài viết'],
+        ['/giai-dau', 'Giải đấu'],
+        ] %}
+        <li class="nav-item {% if this.is_child_of(href) %}active{% endif %}">
+          <a class="nav-link" href="{{ href|url }}">{{ title }}</a>
+        </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+  </nav> <!-- /navbar -->
+
+</header>
+
+
+<div class="container main-container">
+  <div class="row">
+    <div class="col-xs">
+      {% block body %}{% endblock %}
+    </div>
   </div>
-  <footer>
-    &copy; Copyright 2016 by rauden.
-  </footer>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-xs">
+      2016 &copy; SFVietnam
+    </div>
+  </div>
+
+</div> <!-- /container -->
+
+<script src="{{ '/static/bootstrap/js/ie10-viewport-bug-workaround.js'|url }}"></script>
+<!--<script src="{{ '/static/jquery/jquery-3.1.0.min.js'|url }}"></script>-->
+<!--<script src="{{ '/static/bootstrap/js/bootstrap.min.js'|url }}"></script>-->
 </body>

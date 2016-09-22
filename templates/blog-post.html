@@ -1,6 +1,13 @@
 {% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  {{ render_blog_post(this) }}
+  <div class="blog-post">
+    <h1>{{ this.title }}</h1>
+    <div class="meta">
+      {{ this.author }} viết &mdash; {{ this.pub_date|dateformat('long') }}
+    </div>
+
+    {{ this.body }}
+
+  </div>
 {% endblock %}
