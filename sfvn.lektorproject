@@ -2,4 +2,4 @@
 name = sfvn
 
 [servers.ghpages]
-target = ghpages+https://nhanb/sf-vietnam.com
+target = ghpages+https://nhanb/sf-vietnam.com.git
