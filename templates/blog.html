@@ -1,8 +1,21 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
+
 {% block body %}
-  {% for child in this.children %}
-  TODO
+  <h1>{{ this.title }} </h1>
+  <hr>
+
+  {% for post in this.children %}
+  <div class="row blog-index-row">
+    <div class="col-xs">
+
+      <h2 class="blog-index-title"><a href="{{ post|url }}">{{ post.title }}</a></h2>
+      <div class="meta">
+        {{ post.author }} viết &mdash; {{ post.pub_date|dateformat('long') }}
+      </div>
+
+    </div>
+  </div>
   {% endfor %}
 
 {% endblock %}

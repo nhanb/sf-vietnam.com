@@ -1,13 +1,16 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <div class="blog-post">
-    <h1>{{ this.title }}</h1>
-    <div class="meta">
-      {{ this.author }} viết &mdash; {{ this.pub_date|dateformat('long') }}
+  <div class="row">
+    <div class="col-xs">
+
+      <h1>{{ this.title }}</h1>
+      <div class="meta">
+        {{ this.author }} viết &mdash; {{ this.pub_date|dateformat('long') }}
+      </div>
+
+      {{ this.body }}
+
     </div>
-
-    {{ this.body }}
-
   </div>
 {% endblock %}
