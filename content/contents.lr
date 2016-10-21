@@ -1,7 +1,4 @@
-_model: home
+model: blog
 ---
 title: Trang chủ
 ---
-body:
-
-TODO
