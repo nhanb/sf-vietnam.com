@@ -40,6 +40,22 @@ h2.blog-index-title {
   padding-bottom: 1rem;
 }
 
+h2.tournament-index-title {
+  text-align: center;
+  margin-top: 0;
+}
+
+@media (max-width: 543px) {
+  .tournament-row {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .tournament-row .meta {
+    padding-bottom: 1rem;
+  }
+}
+
 blockquote {
   background-color: #e2f0ff;
   margin-left: 3rem;

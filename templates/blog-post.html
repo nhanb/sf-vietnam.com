@@ -5,6 +5,17 @@
     <div class="col-xs">
 
       <h1>{{ this.title }}</h1>
+
+      {% if this.tournaments%}
+      <div class="meta">
+        Giải đấu liên quan:
+        {% for tournament_slug in this.tournaments %}
+        {% set tournament = site.get('/giai-dau/' + tournament_slug) %}
+        <a href="{{ tournament|url }}">{{ tournament.name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
       <div class="meta">
         {{ this.author }} viết &mdash; {{ this.pub_date|dateformat('long') }}
       </div>

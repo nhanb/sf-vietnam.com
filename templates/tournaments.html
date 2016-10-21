@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block body %}
+  <h1>{{ this.title }} </h1>
+  <hr>
+  {% for post in this.children %}
+  <div class="row flex-items-xs-middle tournament-row">
+    <div class="col-sm-7 flex-sm-last">
+      <div class="align-middle">
+        <h2 class="tournament-index-title"><a href="{{ post|url }}">{{ post.name }}</a></h2>
+        <div class="meta">
+          {{ post.start_date|dateformat('short') }} - {{ post.end_date|dateformat('short') }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5 flex-sm-first">
+      <img src="http://placehold.it/600x400" alt="">
+    </div>
+
+  </div>
+
+  {% if not loop.last %}
+  <hr>
+  {% endif %}
+
+  {% endfor %}
+
+{% endblock %}
