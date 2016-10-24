@@ -124,6 +124,11 @@ blockquote > p {
   font-size: 1em;
   border: 2px solid white;
   margin: 0.4em 0;
+  background-color: #444;
+}
+
+.navbar-toggler.collapsed {
+  background-color: transparent;
 }
 
 .navbar-toggler:active, .navbar-toggler:focus {
@@ -138,4 +143,12 @@ blockquote > p {
 
 .navbar-nav .nav-link {
   display: inline-block; /* so that link doesn't span all width */
+}
+
+.no-transition {
+  -webkit-transition: height 0.01s;
+  -moz-transition: height 0.01s;
+  -ms-transition: height 0.01s;
+  -o-transition: height 0.01s;
+  transition: height 0.01s;
 }
