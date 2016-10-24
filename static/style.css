@@ -139,3 +139,11 @@ blockquote > p {
 .navbar-nav .nav-link {
   display: inline-block; /* so that link doesn't span all width */
 }
+
+.no-transition {
+  -webkit-transition: height 0.01s;
+  -moz-transition: height 0.01s;
+  -ms-transition: height 0.01s;
+  -o-transition: height 0.01s;
+  transition: height 0.01s;
+}
