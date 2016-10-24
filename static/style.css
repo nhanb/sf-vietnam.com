@@ -152,3 +152,7 @@ blockquote > p {
   -o-transition: height 0.01s;
   transition: height 0.01s;
 }
+
+.tournament-name {
+  text-transform: uppercase;
+}
