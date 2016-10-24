@@ -124,6 +124,11 @@ blockquote > p {
   font-size: 1em;
   border: 2px solid white;
   margin: 0.4em 0;
+  background-color: #444;
+}
+
+.navbar-toggler.collapsed {
+  background-color: transparent;
 }
 
 .navbar-toggler:active, .navbar-toggler:focus {
