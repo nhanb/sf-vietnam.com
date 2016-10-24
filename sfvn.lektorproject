@@ -1,6 +1,0 @@
-[project]
-name = sfvn
-locale = vi_VN
-
-[servers.ghpages]
-target = ghpages+https://nhanb/sf-vietnam.com.git
