@@ -8,8 +8,8 @@ body {
 
 header {
   height: 400px;
-  background: url('http://cdn4.dualshockers.com/wp-content/uploads/2015/10/02_ca_mid.png');
   background-size: cover;
+  background-position: 50%;
 }
 
 @media (max-width: 543px) {
@@ -46,9 +46,28 @@ h2.blog-index-title {
   padding-bottom: 1rem;
 }
 
-h2.tournament-index-title {
+.tournament-row {
+  margin: 2rem 0;
+  height: 250px;
+  color: white;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.tournament-row a {
+  color: white;
+}
+
+.tournament-row h2 {
   text-align: center;
   margin-top: 0;
+  font-size: 2rem;
+  text-shadow: 0 0 10px black;
+}
+
+.tournament-row .meta {
+  font-size: 1em;
+  text-shadow: 0 0 7px black;
 }
 
 @media (max-width: 543px) {
@@ -155,4 +174,8 @@ blockquote > p {
 
 .tournament-name {
   text-transform: uppercase;
+}
+
+.home-blog-title {
+  padding-top: 2rem;
 }
