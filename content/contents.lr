@@ -1,4 +1,11 @@
-model: blog
+_model: home
 ---
 title: Trang chủ
 ---
+blog_title: Bài viết mới nhất
+---
+tournaments: dummy-tourney, benq-championship-2016
+---
+tournaments_title: Giải đấu sắp tới
+---
+posts: huong-dan-cach-doc-frame-data, cong-tac-tu-tuong-dung-la-scrub

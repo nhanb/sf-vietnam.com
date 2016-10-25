@@ -9,7 +9,11 @@
 <title>{% block title %}Trang chủ{% endblock %} — SFVietnam</title>
 <body>
 
-<header>
+{% if this.header_image %}
+<header style="background-image: url('{{ this.header_image }}')">
+{% else %}
+<header style="background-image: url('{{ '/static/img/header.jpg'|asseturl }}')">
+{% endif %}
 
   <nav class="navbar navbar-default">
     <div class="container">
